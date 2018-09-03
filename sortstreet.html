@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sort The Street - Phaser Version</title>
+        <script src="//cdn.jsdelivr.net/npm/phaser-ce@2.11.0/build/phaser.js"></script>
+    </head>
+    <body>
+
+    <script type="text/javascript">
+
+    window.onload = function() {
+
+        var game = new Phaser.Game(975, 652, Phaser.AUTO, '', { preload: preload, create: create });
+
+        function preload () {
+
+            game.load.image('background', 'assets/back.png');
+            game.load.image('house1', 'assets/house1.png');
+            game.load.image('house2', 'assets/house2.png');
+            game.load.image('house3', 'assets/house3.png');
+            game.load.image('house4', 'assets/house4.png');
+            game.load.image('house5', 'assets/house5.png');
+            game.load.image('house6', 'assets/house6.png');
+            game.load.image('house7', 'assets/house7.png');
+            game.load.image('house8', 'assets/house8.png');
+            game.load.image('house9', 'assets/house9.png');
+            game.load.image('reset', 'assets/reset.png')
+          }
+
+        function create () {
+            var background = game.add.sprite(0,0,'background');
+            var house1 = game.add.sprite(300, 350, 'house1');
+            var house2 = game.add.sprite(400, 350, 'house2');
+            var house3 = game.add.sprite(500, 350, 'house3');
+            var house4 = game.add.sprite(600, 350, 'house4');
+            var house5 = game.add.sprite(250, 500, 'house5');
+            var house6 = game.add.sprite(350, 500, 'house6');
+            var house7 = game.add.sprite(450, 500, 'house7');
+            var house8 = game.add.sprite(550, 500, 'house8');
+            var house9 = game.add.sprite(650, 500, 'house9');
+            var reset = game.add.button(850, 500, 'reset', click);
+            house1.inputEnabled = true;
+            house1.input.enableDrag(true);
+            house2.inputEnabled = true;
+            house2.input.enableDrag(true);
+            house3.inputEnabled = true;
+            house3.input.enableDrag(true);
+            house4.inputEnabled = true;
+            house4.input.enableDrag(true);
+            house5.inputEnabled = true;
+            house5.input.enableDrag(true);
+            house6.inputEnabled = true;
+            house6.input.enableDrag(true);
+            house7.inputEnabled = true;
+            house7.input.enableDrag(true);
+            house8.inputEnabled = true;
+            house8.input.enableDrag(true);
+            house9.inputEnabled = true;
+            house9.input.enableDrag(true);
+
+            function click() {
+              house1.position.x = 300;
+              house1.position.y = 350;
+              house2.position.x = 400;
+              house2.position.y = 350;
+              house3.position.x = 500;
+              house3.position.y = 350;
+              house4.position.x = 600;
+              house4.position.y = 350;
+              house5.position.x = 250;
+              house5.position.y = 500;
+              house6.position.x = 350;
+              house6.position.y = 500;
+              house7.position.x = 450;
+              house7.position.y = 500;
+              house8.position.x = 550;
+              house8.position.y = 500;
+              house9.position.x = 650;
+              house9.position.y = 500;
+
+            }
+        }
+
+
+    };
+
+    </script>
+
+    </body>
+</html>

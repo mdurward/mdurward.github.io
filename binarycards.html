@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var binary1 = "1"; var binary2 = "1"; var binary3 = "1"; var binary4 = "1";
+var binary = "1111";
+var decimal1 = 1; var decimal2 = 2; var decimal3 = 4; var decimal4 = 8;
+var decimal = decimal1 + decimal2 + decimal3 + decimal4;
+$(document).ready(function(){
+    $("#hideone").click(function(){
+        $("#onecard").hide();
+        binary4 = "0";
+        decimal1 = 0;
+        binary = binary1 + binary2 + binary3 + binary4;
+        decimal = decimal1 + decimal2 + decimal3 + decimal4;
+        document.getElementById("binary").innerHTML = binary;
+        document.getElementById("decimal").innerHTML = decimal;
+    });
+    $("#showone").click(function(){
+        $("#onecard").show();
+        binary4 = "1";
+        decimal1 = 1;
+        binary = binary1 + binary2 + binary3 + binary4;
+        decimal = decimal1 + decimal2 + decimal3 + decimal4;
+        document.getElementById("binary").innerHTML = binary;
+        document.getElementById("decimal").innerHTML = decimal;
+    });
+
+    $("#hidetwo").click(function(){
+        $("#twocard").hide();
+        binary3 = "0";
+        decimal2 = 0;
+        binary = binary1 + binary2 + binary3 + binary4;
+        decimal = decimal1 + decimal2 + decimal3 + decimal4;
+        document.getElementById("binary").innerHTML = binary;
+        document.getElementById("decimal").innerHTML = decimal;
+    });
+    $("#showtwo").click(function(){
+        $("#twocard").show();
+        binary3 = "1";
+        decimal2 = 2;
+        binary = binary1 + binary2 + binary3 + binary4;
+        decimal = decimal1 + decimal2 + decimal3 + decimal4;
+        document.getElementById("binary").innerHTML = binary;
+        document.getElementById("decimal").innerHTML = decimal;
+    });
+
+    $("#hidefour").click(function(){
+        $("#fourcard").hide();
+        binary2 = "0";
+        decimal3 = 0;
+        binary = binary1 + binary2 + binary3 + binary4;
+        decimal = decimal1 + decimal2 + decimal3 + decimal4;
+        document.getElementById("binary").innerHTML = binary;
+        document.getElementById("decimal").innerHTML = decimal;
+    });
+    $("#showfour").click(function(){
+        $("#fourcard").show();
+        binary2 = "1";
+        decimal3 = 4
+        binary = binary1 + binary2 + binary3 + binary4;
+        decimal = decimal1 + decimal2 + decimal3 + decimal4;
+        document.getElementById("binary").innerHTML = binary;
+        document.getElementById("decimal").innerHTML = decimal;
+    });
+
+    $("#hideeight").click(function(){
+        $("#eightcard").hide();
+        binary1 = "0";
+        decimal4 = 0;
+        binary = binary1 + binary2 + binary3 + binary4;
+        decimal = decimal1 + decimal2 + decimal3 + decimal4;
+        document.getElementById("binary").innerHTML = binary;
+        document.getElementById("decimal").innerHTML = decimal;
+    });
+    $("#showeight").click(function(){
+        $("#eightcard").show();
+        binary1 = "1";
+        decimal4 = 8;
+        binary = binary1 + binary2 + binary3 + binary4;
+        decimal = decimal1 + decimal2 + decimal3 + decimal4;
+        document.getElementById("binary").innerHTML = binary;
+        document.getElementById("decimal").innerHTML = decimal;
+    });
+});
+
+
+
+</script>
+</head>
+<body>
+  <style>
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+.images {
+    height:500px;
+}
+</style>
+<table>
+  <tr>
+    <td class="images" style="width:400px"><img id="eightcard" src="https://image.ibb.co/dAOtbU/eightcard.png"></td>
+    <td class="images" style="width:400px"><img id="fourcard"src="https://image.ibb.co/neitbU/fourcard.png"></td>
+    <td class="images" style="width:400px"><img id="twocard" src="https://image.ibb.co/fUkBVp/twocard.png"></td>
+    <td class="images" style="width:400px"><img id="onecard" src="https://image.ibb.co/jj2pi9/onecard.png"></td>
+  </tr>
+  <tr>
+    <td>
+      <button id="hideeight">Hide</button>
+      <button id="showeight">Show</button>
+    </td>
+    <td>
+      <button id="hidefour">Hide</button>
+      <button id="showfour">Show</button>
+    </td>
+    <td>
+      <button id="hidetwo">Hide</button>
+      <button id="showtwo">Show</button>
+    </td>
+    <td>
+      <button id="hideone">Hide</button>
+      <button id="showone">Show</button>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Binary Number:</p><p id="binary"></p></td>
+    <td colspan="2"><p>Decimal Value:</p><p id="decimal"></p></td>
+  </tr>
+
+</table>
+
+<script>
+document.getElementById("binary").innerHTML = binary;
+document.getElementById("decimal").innerHTML = decimal;
+</script>
+
+
+
+</body>
+</html>

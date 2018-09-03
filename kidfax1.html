@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- access jquery -->
+
+<body>
+  <style>
+table {
+  width:100%;
+  background-color:white;
+}
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 4px;
+}
+.pixel {
+  height: 35px;
+}
+button {
+  width: 200px;
+  font-size: 15px;
+}
+
+.buttons {
+  text-align: left;
+}
+
+</style>
+<table>
+<tr>
+  <td colspan=19 style="font-family:Courier New; font-size:40px">Kid Fax Challenge 1</td>
+<tr>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td width=30%>4, 11</td>
+</tr>
+<tr>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel solution"></td><td class="pixel"></td><td class="pixel"></td>
+  <td width=30%>4, 9, 2, 1</td>
+</tr>
+<tr>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel solution"></td><td class="pixel"></td><td class="pixel"></td>
+  <td width=30%>4, 9, 2, 1</td>
+</tr>
+<tr>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td width=30%>4, 11</td>
+</tr>
+<tr>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td width=30%>4, 9</td>
+</tr>
+<tr>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td width=30%>4, 9</td>
+</tr>
+<tr>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td class="pixel"></td><td class="pixel"></td><td class="pixel"></td>
+  <td width=30%>5, 7</td>
+</tr>
+<tr>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel"></td>
+  <td width=30%>0, 17</td>
+</tr>
+<tr>
+  <td class="pixel"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel solution"></td><td class="pixel solution"></td>
+  <td class="pixel solution"></td><td class="pixel"></td><td class="pixel"></td>
+  <td width=30%>1, 15</td>
+</tr>
+<tr>
+  <td colspan=19 class="buttons"><button id="clear">Clear</button>
+    <button onclick="showsolution()">Show Solution</button></td>
+
+
+<script>
+function showsolution(){
+  $(".solution").css("background-color","black");
+};
+
+$(document).ready(function(){
+  $(".pixel").click(function(){
+    var color = $(this).css("background-color");
+      if (color == "rgba(0, 0, 0, 0)"||color == "rgb(255, 255, 255)") {
+        $(this).css("background-color","black");
+      }
+      else
+      {
+        $(this).css("background-color","white");
+      };
+    });
+  });
+
+  $(document).ready(function(){
+    $("#clear").click(function(){
+        $(".pixel").css("background-color","white");
+      });
+    });
+</script>
+</html>
