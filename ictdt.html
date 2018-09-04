@@ -33,6 +33,24 @@
             game.load.image('card7', 'assets/card7.PNG');
             game.load.image('card8', 'assets/card8.PNG');
             game.load.image('card9', 'assets/card9.PNG');
+            game.load.image('card10', 'assets/card10.png');
+            game.load.image('card11', 'assets/card11.png');
+            game.load.image('card12', 'assets/card12.png');
+            game.load.image('card13', 'assets/card13.png');
+            game.load.image('card14', 'assets/card14.png');
+            game.load.image('card15', 'assets/card15.png');
+            game.load.image('card16', 'assets/card16.png');
+            game.load.image('card17', 'assets/card17.png');
+            game.load.image('card18', 'assets/card18.png');
+            game.load.image('card19', 'assets/card19.png');
+            game.load.image('card20', 'assets/card20.png');
+            game.load.image('card21', 'assets/card21.png');
+            game.load.image('card22', 'assets/card22.png');
+            game.load.image('card23', 'assets/card23.png');
+            game.load.image('card24', 'assets/card24.png');
+            game.load.image('card25', 'assets/card25.png');
+            game.load.image('card26', 'assets/card26.png');
+            game.load.image('card27', 'assets/card27.png');
             game.load.image('dtbutton', 'assets/dtbutton.png');
             game.load.image('ictbutton', 'assets/ictbutton.png');
             game.load.image('start', 'assets/start.png');
@@ -60,42 +78,47 @@
 
             var dtbutton = game.add.button(300, 200, 'dtbutton', dtclick, this);
             var ictbutton = game.add.button(600, 200, 'ictbutton', dtclick, this);
-            var card1 = game.add.sprite(520, 400, 'card1');
-            var card2 = game.add.sprite(520, 400, 'card2');
-            var card3 = game.add.sprite(520, 400, 'card3');
-            var card4 = game.add.sprite(520, 400, 'card4');
-            var card5 = game.add.sprite(520, 400, 'card5');
-            var card6 = game.add.sprite(520, 400, 'card6');
-            var card7 = game.add.sprite(520, 400, 'card7');
-            var card8 = game.add.sprite(520, 400, 'card8');
-            var card9 = game.add.sprite(520, 400, 'card9');
+            var card1 = game.add.sprite(520, 400, 'card1'); var card14 = game.add.sprite(520, 400, 'card14');
+            var card2 = game.add.sprite(520, 400, 'card2'); var card15 = game.add.sprite(520, 400, 'card15');
+            var card3 = game.add.sprite(520, 400, 'card3'); var card16 = game.add.sprite(520, 400, 'card16');
+            var card4 = game.add.sprite(520, 400, 'card4'); var card17 = game.add.sprite(520, 400, 'card17');
+            var card5 = game.add.sprite(520, 400, 'card5'); var card18 = game.add.sprite(520, 400, 'card18');
+            var card6 = game.add.sprite(520, 400, 'card6'); var card19 = game.add.sprite(520, 400, 'card19');
+            var card7 = game.add.sprite(520, 400, 'card7'); var card20 = game.add.sprite(520, 400, 'card20');
+            var card8 = game.add.sprite(520, 400, 'card8'); var card21 = game.add.sprite(520, 400, 'card21');
+            var card9 = game.add.sprite(520, 400, 'card9'); var card22 = game.add.sprite(520, 400, 'card22');
+            var card10 = game.add.sprite(520, 400, 'card10'); var card23 = game.add.sprite(520, 400, 'card23');
+            var card11 = game.add.sprite(520, 400, 'card11'); var card24 = game.add.sprite(520, 400, 'card24');
+            var card12 = game.add.sprite(520, 400, 'card12'); var card25 = game.add.sprite(520, 400, 'card25');
+            var card13 = game.add.sprite(520, 400, 'card13'); var card26 = game.add.sprite(520, 400, 'card26');
+            var card27 = game.add.sprite(520, 400, 'card27');
             dtbutton.visible = false;
             ictbutton.visible = false;
-            card1.visible = false;
-            card2.visible = false;
-            card3.visible = false;
-            card4.visible = false;
-            card5.visible = false;
-            card6.visible = false;
-            card7.visible = false;
-            card8.visible = false;
-            card9.visible = false;
+            card1.visible = false; card10.visible = false; card19.visible = false;
+            card2.visible = false; card11.visible = false; card20.visible = false;
+            card3.visible = false; card12.visible = false; card21.visible = false;
+            card4.visible = false; card13.visible = false; card22.visible = false;
+            card5.visible = false; card14.visible = false; card23.visible = false;
+            card6.visible = false; card15.visible = false; card24.visible = false;
+            card7.visible = false; card16.visible = false; card25.visible = false;
+            card8.visible = false; card17.visible = false; card26.visible = false;
+            card9.visible = false; card18.visible = false; card27.visible = false;
 
             var start = game.add.button(450, 600, 'start', startclick);
 
             card1.inputEnabled = true;
             card1.input.enableDrag(true);
 
-
-            //dtbutton.visible = false;
-          //  ictbutton.visible = false;
-            //card1.visible = false;
-
             function startclick() {
               dtbutton.visible = true;
               ictbutton.visible = true;
               card1.visible = true;
               scoreText.visible = true;
+              start.visible = false;
+              score = 0;
+              scoreText.x = 16;
+              scoreText.y = 650;
+              scoreText.setText("Score: 0")
             }
 
             function dtclick(button) {
@@ -169,6 +192,175 @@
                 score += 10;
                 scoreText.setText('Score: ' + score);
               }
+              }
+
+              else if (card9.visible === true) {
+                card9.visible = false;
+                card10.visible = true;
+                if (button === ictbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card10.visible === true) {
+                card10.visible = false;
+                card11.visible = true;
+                if (button === dtbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card11.visible === true) {
+                card11.visible = false;
+                card12.visible = true;
+                if (button === dtbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card12.visible === true) {
+                card12.visible = false;
+                card13.visible = true;
+                if (button === dtbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card13.visible === true) {
+                card13.visible = false;
+                card14.visible = true;
+                if (button === ictbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card14.visible === true) {
+                card14.visible = false;
+                card15.visible = true;
+                if (button === ictbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card15.visible === true) {
+                card15.visible = false;
+                card16.visible = true;
+                if (button === ictbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card16.visible === true) {
+                card16.visible = false;
+                card17.visible = true;
+                if (button === dtbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card17.visible === true) {
+                card17.visible = false;
+                card18.visible = true;
+                if (button === dtbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card18.visible === true) {
+                card18.visible = false;
+                card19.visible = true;
+                if (button === dtbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card19.visible === true) {
+                card19.visible = false;
+                card20.visible = true;
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+
+              else if (card20.visible === true) {
+                card20.visible = false;
+                card21.visible = true;
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+
+              else if (card21.visible === true) {
+                card21.visible = false;
+                card22.visible = true;
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+
+              else if (card22.visible === true) {
+                card22.visible = false;
+                card23.visible = true;
+                if (button === dtbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card23.visible === true) {
+                card23.visible = false;
+                card24.visible = true;
+                if (button === ictbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card24.visible === true) {
+                card24.visible = false;
+                card25.visible = true;
+                if (button === ictbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card25.visible === true) {
+                card25.visible = false;
+                card26.visible = true;
+                if (button === ictbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+
+              else if (card26.visible === true) {
+                card26.visible = false;
+                card27.visible = true;
+                if (button === dtbutton) {
+                score += 10;
+                scoreText.setText('Score: ' + score);
+              }
+              }
+              else if (card27.visible === true) {
+                if (button === dtbutton) {
+                  score += 10;
+                  scoreText.setText('Final Score: ' + score);
+                }
+                scoreText.setText('Final Score: ' + score)
+                card27.visible = false;
+                scoreText.x = 460;
+                scoreText.y = 400;
+                dtbutton.visible = false;
+                ictbutton.visible = false;
+                start.visible = true;
               }
             }
           }
